@@ -9,15 +9,15 @@ class Fingerprint < ActiveRecord::Base
   belongs_to :person
   has_many :criminal_histories, through: :person
 
-  def for_offenders_of(incident_type)
+  def self.for_offenders_of(incident_type)
   	Fingerprint.where(person_id: CriminalHistory.select(:person_id).where(incident_type_id: incident_type.id))
   end
 
-  def of_unknown_people
+  def self.of_unknown_people
   	Fingerprint.where(person_id: nil)
   end
 
-  def early_twentieth_century
+  def self.early_twentieth_century
   	Fingerprint.where(taken_at: Time.utc(1900)...Time.utc(1931))
   end
 end
