@@ -1,4 +1,4 @@
-# require '../../app/models/incident_type'
+require 'spec_helper'
 
 describe "IncidentType" do
   describe "::alphabetical" do
