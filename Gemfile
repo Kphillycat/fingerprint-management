@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 group :test, :development do
   gem 'pry'
+  gem 'debugger'
 end
 
 group :test do
