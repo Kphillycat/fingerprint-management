@@ -1,3 +1,5 @@
+# require '../../app/models/incident_type'
+
 describe "IncidentType" do
   describe "::alphabetical" do
     it "should return an alphabetical list of incident types" do
